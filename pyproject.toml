@@ -4,15 +4,17 @@ version = "0.1.0"
 description = ""
 authors = ["rul-duran <raulduran816@gmail.com>"]
 readme = "README.md"
-packages = [{include = "inverted_index"}]
+packages = [{include = "src"}]
 
 [tool.poetry.scripts]
-start = "main"
+start = "python3:src/main.py"
+test = "pytest:tests/setup.py"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 requests = "^2.31.0"
 logging = "^0.4.9.6"
+pytest = "^7.4.0"
 
 
 [build-system]
