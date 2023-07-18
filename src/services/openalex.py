@@ -1,7 +1,8 @@
+from typing import Dict, Any
 import requests
 
-uri = 'https://api.openalex.org/'
+URI: str = 'https://api.openalex.org/'
 
 
-def getRandomWork():
-    return requests.get(f'{uri}/works?sample=1').json()['results'][0]
+def getRandomWork() -> Dict[str, Any]:
+    return requests.get(f'{URI}/works?sample=1').json()['results'][0]
